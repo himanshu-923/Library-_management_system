@@ -1,9 +1,10 @@
-from utlis import books
+from utils import books
+
 
 def show_books():
+    print("\nAvailable Books")
     if len(books) == 0:
-        print("No books available in the library.")
+        print("No books available")
     else:
-        print("Books available in the library:")
-        for _ in books:
-            print(f"- {_}")
+        for book_name, quantity in books.items():
+            print(book_name, "- Copies:", quantity)
